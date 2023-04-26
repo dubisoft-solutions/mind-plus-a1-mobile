@@ -1,0 +1,150 @@
+@import 'theme/theme';
+.index {
+    background-color: $black-23;
+    .hero {
+        position: relative;
+        padding: 8.125rem 0;
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+        }
+        &::before {
+            width: 100%;
+            height: 100%;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            background-image: url("../img/hero-decor-left.svg");
+            background-position: top left;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+        &::after {
+            width: 100%;
+            height: 100%;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            background-image: url("../img/hero-decor-right.svg");
+            background-position: top right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+        .main-bg {
+            position: relative;
+            height: calc(78vw/1);
+            &::before {
+                width: 100%;
+                height: 100%;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                background-image: url("../img/landing-img-mobile.svg");
+                background-position: top center;
+                background-repeat: no-repeat;
+                z-index: 1;
+                background-size: contain;
+                @include media-breakpoint-up(lg) {
+                    background-image: url("../img/landing-img-desktop.svg");
+                }
+            }
+            @include media-breakpoint-up(lg) {
+                height: calc(30vw/1);
+            }
+        }
+    }
+    .read-more-link {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $blue;
+        @include media-breakpoint-down(lg) {
+            font-size: .875rem;
+        }
+        &:hover {
+            color: $blue;
+        }
+        &::before,
+        &::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+            width: 1.125rem;
+            height: 1.125rem;
+            border-radius: 50px;
+            @include icon-styles;
+            content: icon-char(minus);
+            color: $blue;
+            font-size: 0.6rem;
+            margin: 0 .625rem;
+        }
+        &.collapsed::after,
+        &.collapsed::before {
+            content: icon-char(plus);
+        }
+        .show-expanded {
+            display: none;
+        }
+        .show-collapsed {
+            display: inline-block;
+        }
+        &.collapsed {
+            .show-expanded {
+                display: inline-block;
+            }
+            .show-collapsed {
+                display: none;
+            }
+        }
+    }
+    .read-more-list {
+        list-style-type: none;
+        li {
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            color: $black;
+            text-align: start;
+            text-transform: capitalize;
+            margin-bottom: 0.875rem;
+            span,
+            a {
+                color: $red;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: .75rem;
+                line-height: .938rem;
+            }
+        }
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .footer {
+        background-color: $white;
+        .list-inline {
+            .list-inline-item {
+                margin-right: 0;
+                .btn-link {
+                    font-size: .75rem;
+                    --bs-link-color: #{$blue};
+                    --bs-link-hover-color: #{$blue};
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.btn {
+    --bs-btn-color: #{$white};
+    --bs-btn-hover-color: #{$white};
+    --bs-btn-active-color: #{$white};
+    --bs-btn-border-radius: 0;
+}
+
+.btn-primary {
+    --bs-btn-hover-color: #{$white};
+    background: $blue!important;
+    border: none;
+    &:focus,
+    &:hover,
+    &:active {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 1px 1px 7px 3px rgba(21, 153, 190, 0.44), inset 0px 4.32166px 21.6083px rgba(0, 0, 0, 0.14);
+        background-color: $blue;
+    }
+}
+
+.btn-link {
+    font-size: 1rem;
+    --bs-link-color: #{$black};
+    --bs-btn-hover-color: #{$black};
+    padding: 0;
+    @include media-breakpoint-down(md) {
+        font-size: .75rem;
+    }
+}
