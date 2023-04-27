@@ -1,10 +1,10 @@
-### Filmable Markup project ###
+### Mind plus a1-mobile Markup project ###
 
 Markup project created by figma design.
 
-Demo link [url](https://dubisoft-solutions.github.io/filmable-markup/ "Demo project link")
+Demo link [url](https://dubisoft-solutions.github.io/mind-plus-a1-mobile/ "Demo project link")
 
-RTL version: [url](https://dubisoft-solutions.github.io/filmable-markup/?rtl=true "Demo rtl project link")
+RTL version: [url](https://dubisoft-solutions.github.io/mind-plus-a1-mobile/?rtl=true "Demo rtl project link")
 
 ## Project structure ##
 
