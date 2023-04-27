@@ -111,10 +111,20 @@
         .list-inline {
             .list-inline-item {
                 margin-right: 0;
+                border-right: 1px solid $black-70;
                 .btn-link {
                     font-size: .75rem;
                     --bs-link-color: #{$blue};
                     --bs-link-hover-color: #{$blue};
+                }
+            }
+            .list-inline-item:last-child {
+                border-right: none;
+            }
+            .list-inline-item.border-right:last-child {
+                border-right: 1px solid $black-70;
+                @include media-breakpoint-down(lg) {
+                    border-right: none;
                 }
             }
         }
