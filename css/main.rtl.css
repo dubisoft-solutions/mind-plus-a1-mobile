@@ -9829,9 +9829,21 @@ p {
 }
 .index .footer .list-inline .list-inline-item {
   margin-left: 0;
+  border-left: 1px solid #464646;
 }
 .index .footer .list-inline .list-inline-item .btn-link {
   font-size: 0.75rem;
   --bs-link-color: #1599BE;
   --bs-link-hover-color: #1599BE;
+}
+.index .footer .list-inline .list-inline-item:last-child {
+  border-left: none;
+}
+.index .footer .list-inline .list-inline-item.border-right:last-child {
+  border-left: 1px solid #464646;
+}
+@media (max-width: 991.98px) {
+  .index .footer .list-inline .list-inline-item.border-right:last-child {
+    border-left: none;
+  }
 }
